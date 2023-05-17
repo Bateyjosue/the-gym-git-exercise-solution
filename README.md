@@ -206,3 +206,121 @@ jb-dev% git stash pop --index 0
       91b040c..015af51  ft/bundle-2 -> ft/bundle-2
   jb-dev% 
 ```
+
+## Exercise 2
+
+```bash
+  jb-dev% git switch main 
+    Switched to branch 'main'
+    Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+      (use "git pull" to update your local branch)
+  jb-dev% git pull
+    Updating 1e66b7c..a671154
+    Fast-forward
+    services.html                  | 12 ++++++++++++
+    src/{index.html => about.html} |  4 ++--
+    src/home.html                  | 13 +++++++++++++
+    src/style.css                  |  4 ++++
+    4 files changed, 31 insertions(+), 2 deletions(-)
+    create mode 100644 services.html
+    rename src/{index.html => about.html} (74%)
+    create mode 100644 src/home.html
+  
+  jb-dev% git checkout -b ft/service-redesign
+    Switched to a new branch 'ft/service-redesign'
+  jb-dev% git add services.html 
+  jb-dev% git commit -m "Add descriptive paragraph"          
+    [ft/service-redesign f353589] Add descriptive paragraph
+    1 file changed, 4 insertions(+), 1 deletion(-)
+  jb-dev% git push -u origin ft/service-redesign 
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 908 bytes | 908.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/service-redesign
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/service-redesign -> ft/service-redesign
+    Branch 'ft/service-redesign' set up to track remote branch 'ft/service-redesign' from 'origin'.
+    jb-dev% git status
+    On branch ft/service-redesign
+    Your branch is up to date with 'origin/ft/service-redesign'.
+
+    nothing to commit, working tree clean
+  jb-dev% git switch main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+  jb-dev% git add services.html 
+  jb-dev% git commit -m "Add headline and paragraph"
+    [main 6de9e7e] Add headline and paragraph
+    1 file changed, 7 insertions(+), 1 deletion(-)
+    jb-dev% git push
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 653 bytes | 653.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+      a671154..6de9e7e  main -> main
+  jb-dev% git switch ft/service-redesign 
+    Switched to branch 'ft/service-redesign'
+    Your branch is up to date with 'origin/ft/service-redesign'.
+
+  jb-dev% git diff ft/service-redesign..main
+    diff --git a/services.html b/services.html
+    index 060621b..0aa4c1e 100644
+    --- a/services.html
+    +++ b/services.html
+    @@ -7,9 +7,12 @@
+      <title>Git Exercise | Services</title>
+    </head>
+    <body>
+    -  <h1>
+    +  <h2>
+        Services Page Git Exercise
+    -  </h1>
+    -  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus nam fuga provident impedit similique! Labore doloribus officia odio fuga, debitis autem natus amet corrupti, deserunt beatae ullam reiciendis illo iure quam magni, modi veniam dolorum ipsam veritatis. Ab minus exercitationem harum? At quia voluptas pariatur obcaecati maxime delectus facilis, id ducimus. Consequatur ad expedita, eos rerum placeat doloribus officia rem soluta libero porro, consectetur, est itaque? Fugit dignissimos quia ducimus aut id alias corporis beatae, ipsa sapiente ullam maiores eaque, ab dicta labore temporibus ipsam fuga hic cumque fugiat laborum, consequatur dolorem iure provident et! Modi doloribus incidunt voluptas minima!</p>
+    +  </h2>
+    +  <p>
+    +    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quasi aspernatur dignissimos in harum quisquam, veniam laudantium possimus tempore. Provident.
+    +    <a href="#">Read more</a>
+    +  </p>
+    </body>
+    </html>
+    \ No newline at end of file
+  
+  jb-dev% git merge main
+    Auto-merging services.html
+    CONFLICT (content): Merge conflict in services.html
+    Automatic merge failed; fix conflicts and then commit the result.
+    jb-dev% git add .
+    jb-dev% git commit -m "Fix Merge"
+    [ft/service-redesign 05f47be] Fix Merge
+    jb-dev% git status
+    On branch ft/service-redesign
+    Your branch is ahead of 'origin/ft/service-redesign' by 2 commits.
+      (use "git push" to publish your local commits)
+
+    nothing to commit, working tree clean
+  jb-dev% git push
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 551 bytes | 551.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+      f353589..05f47be  ft/service-redesign -> ft/service-redesign
+```
