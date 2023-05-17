@@ -324,3 +324,127 @@ jb-dev% git stash pop --index 0
     To https://github.com/Bateyjosue/bundle1-exercise1.git
       f353589..05f47be  ft/service-redesign -> ft/service-redesign
 ```
+
+# Bundle 3
+## Exercise 1
+
+```bash
+  jb-dev% git checkout -b ft/team-page
+    Switched to a new branch 'ft/team-page'
+  jb-dev% touch team.html
+  jb-dev% code team.html 
+  jb-dev% git add .
+  jb-dev% git commit -m "Add Team page"
+    [ft/team-page 7649b1d] Add Team page
+    1 file changed, 14 insertions(+)
+    create mode 100644 team.html
+  jb-dev% git push -u origin ft/team-page 
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 475 bytes | 475.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/team-page
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/team-page -> ft/team-page
+    Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
+  jb-dev% git switch main 
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+  jb-dev% git checkout -b ft/contact-page
+    Switched to a new branch 'ft/contact-page'
+  jb-dev% git checkout ft/team-page 
+    Switched to branch 'ft/team-page'
+    Your branch is up to date with 'origin/ft/team-page'.
+  jb-dev% git log --oneline
+    7649b1d (HEAD -> ft/team-page, origin/ft/team-page) Add Team page
+    da37eb3 (origin/main, main, ft/contact-page) Merge pull request #3 from Bateyjosue/ft/service-redesign
+    05f47be (origin/ft/service-redesign, ft/service-redesign) Fix Merge
+    6de9e7e Add headline and paragraph
+    f353589 Add descriptive paragraph
+    a671154 Merge pull request #2 from Bateyjosue/ft/bundle-2
+    015af51 (origin/ft/bundle-2, ft/bundle-2) Add services.html page
+    5b9efbe Merge pull request #1 from Bateyjosue/dev
+    91b040c (origin/dev, dev) Fix Merge
+    0b4f6c8 Add file home and about
+    0b8f3ac Add file home and about
+    1e66b7c (test) Update README.md to add description
+    ee8c310 Git Setup
+  jb-dev% git checkout ft/contact-page 
+    Switched to branch 'ft/contact-page'
+
+  jb-dev% git cherry-pick 7649b1d
+    [ft/contact-page 7497724] Add Team page
+    Date: Wed May 17 12:36:42 2023 +0200
+    1 file changed, 14 insertions(+)
+    create mode 100644 team.html
+  jb-dev% git status
+    On branch ft/contact-page
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   team.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+  jb-dev% git add team.html 
+  jb-dev% git commit -m "Add the descriptive paragraphin team.html page"
+    [ft/contact-page 2634d00] Add the descriptive paragraphin team.html page
+    1 file changed, 1 insertion(+)
+    jb-dev% git push -u origin ft/contact-page 
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (6/6), 964 bytes | 964.00 KiB/s, done.
+    Total 6 (delta 3), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/contact-page
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/contact-page -> ft/contact-page
+    Branch 'ft/contact-page' set up to track remote branch 'ft/contact-page' from 'origin'.
+
+  jb-dev% git checkout -b ft/faq-page
+    Switched to a new branch 'ft/faq-page'
+  jb-dev% touch faq.html
+  jb-dev% code faq.html 
+  jb-dev% git add faq.html 
+  jb-dev% git commit -m "Add faq page"
+    [ft/faq-page ca81e5e] Add faq page
+    1 file changed, 14 insertions(+)
+    create mode 100644 faq.html
+  jb-dev% git push -u origin ft/faq-page 
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 474 bytes | 474.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/faq-page
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/faq-page -> ft/faq-page
+    Branch 'ft/faq-page' set up to track remote branch 'ft/faq-page' from 'origin'.
+
+  jb-dev% git revert  7649b1d      
+    Removing team.html
+    [ft/team-page e09b471] Revert "Add Team page"
+    1 file changed, 14 deletions(-)
+    delete mode 100644 team.html
+```
