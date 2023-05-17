@@ -648,3 +648,46 @@ jb-dev% git stash pop --index 0
 ## Exercise 1
 
 [Deployed Link](https://bateyjosue.github.io/Git-Exercise/)
+
+# Bundle 5
+## Exercise 2
+
+```bash
+  jb-dev% git clone https://github.com/Bateyjosue/git-cafe-exercise.git
+    Cloning into 'git-cafe-exercise'...
+    remote: Enumerating objects: 107, done.
+    remote: Counting objects: 100% (7/7), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 100
+    Receiving objects: 100% (107/107), 1.95 MiB | 37.00 KiB/s, done.
+    Resolving deltas: 100% (5/5), done.
+  jb-dev% cd git-cafe-exercise 
+  jb-dev% code .
+  b-dev% code index.html 
+  jb-dev% git status
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+  jb-dev% git add index.html 
+  jb-dev% git commit -m "main section change title"
+    [main 6cb7003] main section change title
+    1 file changed, 1 insertion(+), 1 deletion(-)
+  jb-dev% git push -u origin main 
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/Bateyjosue/git-cafe-exercise.git
+      d1d3f9c..6cb7003  main -> main
+    Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+```
