@@ -172,3 +172,37 @@ jb-dev% git stash pop --index 0
   jb-dev% git reset --hard
     HEAD is now at 0b4f6c8  Add file home and about
 ```
+
+# Bundle 2
+## Exercise 1
+
+```bash
+  jb-dev% git checkout -b ft/bundle-2
+  jb-dev% touch services.html && code services.html
+  jb-dev% git status
+    On branch ft/bundle-2
+    Your branch is up to date with 'origin/ft/bundle-2'.
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            services.html
+
+    nothing added to commit but untracked files present (use "git add" to track)
+  jb-dev% git add .
+  jb-dev% git commit -m "Add services.html page"
+    [ft/bundle-2 015af51] Add services.html page
+    1 file changed, 12 insertions(+)
+    create mode 100644 services.html
+  jb-dev% git push
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 520 bytes | 520.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+      91b040c..015af51  ft/bundle-2 -> ft/bundle-2
+  jb-dev% 
+```
