@@ -447,4 +447,58 @@ jb-dev% git stash pop --index 0
     [ft/team-page e09b471] Revert "Add Team page"
     1 file changed, 14 deletions(-)
     delete mode 100644 team.html
+
+```
+
+## Exercise 1
+```bash
+  jb-dev% git checkout -b ft/home-page-redesign
+    Switched to a new branch 'ft/home-page-redesign'
+  jb-dev% git switch main 
+    Switched to branch 'main'
+    Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+      (use "git pull" to update your local branch)
+  jb-dev% git add .
+  jb-dev% git commit -m 'Add paragraph headline '
+    [main 64978e1] Add paragraph headline
+    1 file changed, 1 insertion(+)
+  jb-dev% git push
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 556 bytes | 556.00 KiB/s, done.
+    Total 4 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+      0d16f15..64978e1  main -> main
+  jb-dev% git switch ft/home-page-redesign 
+    Switched to branch 'ft/home-page-redesign'
+  jb-dev% git rebase main
+    First, rewinding head to replay your work on top of it...
+    Applying: Add the descriptive paragraphin team.html page
+    Applying: Add faq page
+  jb-dev% git add .   
+  jb-dev% git commit -m "Add FAQ paragraph"
+    [ft/home-page-redesign ad308e9] Add FAQ paragraph
+    1 file changed, 4 insertions(+)
+  jb-dev% git  push -u origin ft/home-page-redesign 
+    Enumerating objects: 14, done.
+    Counting objects: 100% (14/14), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (10/10), done.
+    Writing objects: 100% (10/10), 1.73 KiB | 1.73 MiB/s, done.
+    Total 10 (delta 3), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/home-page-redesign
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+    Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
 ```
