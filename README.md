@@ -450,7 +450,7 @@ jb-dev% git stash pop --index 0
 
 ```
 
-## Exercise 1
+## Exercise 2
 ```bash
   jb-dev% git checkout -b ft/home-page-redesign
     Switched to a new branch 'ft/home-page-redesign'
@@ -501,4 +501,49 @@ jb-dev% git stash pop --index 0
     To https://github.com/Bateyjosue/bundle1-exercise1.git
     * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
     Branch 'ft/home-page-redesign' set up to track remote branch 'ft/home-page-redesign' from 'origin'.
+```
+
+# Bundle 4
+## Exercise 1
+
+```bash
+  jb-dev% git switch main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+  jb-dev% git remote add git-copy https://github.com/Bateyjosue/Git-Exercise-cp.git   
+  jb-dev% git remote -v
+    git-copy        https://github.com/Bateyjosue/Git-Exercise-cp.git (fetch)
+    git-copy        https://github.com/Bateyjosue/Git-Exercise-cp.git (push)
+    origin  https://github.com/Bateyjosue/bundle1-exercise1.git (fetch)
+    origin  https://github.com/Bateyjosue/bundle1-exercise1.git (push)
+  jb-dev% git add src/
+  jb-dev% git commit -m "Add headline on home page"
+    [main 2eb8729] Add headline on home page
+    1 file changed, 4 insertions(+)
+  jb-dev% git remote set-url --add --push origin https://github.com/Bateyjosue/Git-Exercise-cp.git
+  jb-dev% git remote set-url --add --push origin https://github.com/Bateyjosue/bundle1-exercise1.git
+  jb-dev% git push -u origin main
+    Enumerating objects: 50, done.
+    Counting objects: 100% (50/50), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (48/48), done.
+    Writing objects: 100% (50/50), 7.87 KiB | 732.00 KiB/s, done.
+    Total 50 (delta 15), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (15/15), done.
+    To https://github.com/Bateyjosue/Git-Exercise-cp.git
+    * [new branch]      main -> main
+    Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+    Enumerating objects: 12, done.
+    Counting objects: 100% (12/12), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (6/6), 901 bytes | 901.00 KiB/s, done.
+    Total 6 (delta 3), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+      4697072..a5e9d18  main -> main
+    Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
