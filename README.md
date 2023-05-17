@@ -691,3 +691,30 @@ jb-dev% git stash pop --index 0
     Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 ```
+
+# Bundle 6
+## Exercise 1
+
+```bash
+  jb-dev% git checkout -b ft/bundle6#exercise1
+    Switched to a new branch 'ft/bundle6#exercise1'
+  jb-dev% git add index-3.html 
+  jb-dev% git commit -m "Change headline title"
+    [ft/bundle6#exercise1 6d1367f] Change headline title
+    1 file changed, 1 insertion(+), 1 deletion(-)
+  jb-dev% git push -u origin ft/bundle6\#exercise1 
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'ft/bundle6#exercise1' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/git-cafe-exercise/pull/new/ft/bundle6%23exercise1
+    remote: 
+    To https://github.com/Bateyjosue/git-cafe-exercise.git
+    * [new branch]      ft/bundle6#exercise1 -> ft/bundle6#exercise1
+    Branch 'ft/bundle6#exercise1' set up to track remote branch 'ft/bundle6#exercise1' from 'origin'.
+```
