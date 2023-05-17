@@ -547,3 +547,99 @@ jb-dev% git stash pop --index 0
       4697072..a5e9d18  main -> main
     Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
+
+## Exercise 2
+
+```bash 
+  jb-dev% git commit -m "Add footer content"
+    [ft/footer b160381] Add footer content
+    1 file changed, 3 insertions(+)
+  jb-dev% git status
+    On branch ft/footer
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   src/home.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+  jb-dev% git add src/
+  jb-dev% git commit -m "Add logo in the footer"
+    [ft/footer 7205658] Add logo in the footer
+    1 file changed, 3 insertions(+)
+  jb-dev% git push -u origin ft/footer 
+    Enumerating objects: 11, done.
+    Counting objects: 100% (11/11), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (8/8), done.
+    Writing objects: 100% (8/8), 958 bytes | 958.00 KiB/s, done.
+    Total 8 (delta 4), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise-cp/pull/new/ft/footer
+    remote: 
+    To https://github.com/Bateyjosue/Git-Exercise-cp.git
+    * [new branch]      ft/footer -> ft/footer
+    Branch 'ft/footer' set up to track remote branch 'ft/footer' from 'origin'.
+    Enumerating objects: 11, done.
+    Counting objects: 100% (11/11), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (8/8), done.
+    Writing objects: 100% (8/8), 958 bytes | 958.00 KiB/s, done.
+    Total 8 (delta 4), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/footer
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/footer -> ft/footer
+    Branch 'ft/footer' set up to track remote branch 'ft/footer' from 'origin'.
+  jb-dev% git switch main 
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+  jb-dev% git checkout -b ft/squashing
+    Switched to a new branch 'ft/squashing'
+  jb-dev% git merge --squash ft/footer
+    Updating a5e9d18..7205658
+    Fast-forward
+    Squash commit -- not updating HEAD
+    src/home.html | 6 ++++++
+    1 file changed, 6 insertions(+)
+  jb-dev% git commit -m "footer changes squashing"
+    [ft/squashing fdbb0d0] footer changes squashing
+    1 file changed, 6 insertions(+)
+  jb-dev% git push -u origin ft/squashing 
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 605 bytes | 605.00 KiB/s, done.
+    Total 4 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise-cp/pull/new/ft/squashing
+    remote: 
+    To https://github.com/Bateyjosue/Git-Exercise-cp.git
+    * [new branch]      ft/squashing -> ft/squashing
+    Branch 'ft/squashing' set up to track remote branch 'ft/squashing' from 'origin'.
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 605 bytes | 605.00 KiB/s, done.
+    Total 4 (delta 2), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: This repository moved. Please use the new location:
+    remote:   https://github.com/Bateyjosue/Git-Exercise.git
+    remote: 
+    remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+    remote:      https://github.com/Bateyjosue/Git-Exercise/pull/new/ft/squashing
+    remote: 
+    To https://github.com/Bateyjosue/bundle1-exercise1.git
+    * [new branch]      ft/squashing -> ft/squashing
+    Branch 'ft/squashing' set up to track remote branch 'ft/squashing' from 'origin'.
+```
